@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".EnterMadLibInfo"></activity>
         <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".IngestMadlib"></activity>
     </application>
 
 </manifest>

@@ -29,7 +29,8 @@
             android:text="Add Text to Story"
             android:id="@+id/constructorButtonAddText"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/view_top_spacer"/>
+            android:layout_marginTop="@dimen/view_top_spacer"
+            android:onClick="addMLText"/>
     </LinearLayout>
 
     <LinearLayout
@@ -50,7 +51,8 @@
             android:text="Add Space"
             android:id="@+id/constructorButtonForSpinner"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/view_top_spacer"/>
+            android:layout_marginTop="@dimen/view_top_spacer"
+            android:onClick="addSpace"/>
 
     </LinearLayout>
 
@@ -88,14 +90,16 @@
                 android:layout_height="45dp"
                 android:text="Reset All Text"
                 android:id="@+id/constructorButtonResetInput"
-                android:layout_gravity="bottom" />
+                android:layout_gravity="bottom"
+                android:onClick="resetAllText"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:text="Mad Lib Complete"
                 android:id="@+id/constructorButtonMadLibComplete"
-                android:layout_gravity="bottom" />
+                android:layout_gravity="bottom"
+                android:onClick="finishML"/>
         </LinearLayout>
     </LinearLayout>
 

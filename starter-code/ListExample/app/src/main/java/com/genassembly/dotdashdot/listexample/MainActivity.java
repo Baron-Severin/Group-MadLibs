@@ -1,5 +1,6 @@
 package com.genassembly.dotdashdot.listexample;
 
+import android.content.Intent;
 import android.provider.UserDictionary;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener sortWords;
     View.OnClickListener sortGenre;
     View.OnClickListener sortSpaces;
-
+    public static ArrayList<MadLibs> madLibsHolder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        madLibsHolder = new ArrayList<MadLibs>();
+
     }
 
     public void sortByWords(View v) {
@@ -90,5 +93,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         adapty.notifyDataSetChanged();
+    }
+
+    public void openIngestMadLib(View view) {
+        Intent intent = new Intent(this.getApplicationContext(), IngestMadlib.class);
+        this.startActivity(intent);
     }
 }

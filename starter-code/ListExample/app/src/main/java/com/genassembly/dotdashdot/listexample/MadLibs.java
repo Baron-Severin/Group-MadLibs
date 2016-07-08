@@ -1,31 +1,29 @@
 package com.genassembly.dotdashdot.listexample;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class MadLibs {
-
 
     private int words, spaces;
     private String genre;
     static int wordCount=0;
-
-
-    private ArrayList<String> madLib;
-
-
+    public ArrayList<String> madLibs;
 
     public MadLibs(String genre, int words, int spaces){
         this.genre = genre;
         this.words = words;
         this.spaces = spaces;
     }
+<<<<<<< HEAD
 
     public MadLibs(String genre, ArrayList<String> madLib){
+=======
+    public MadLibs(String genre, ArrayList<String> madLibs){
+>>>>>>> b4049600169fc950f3f4be1ecdd236246770c864
         this.genre = genre;
-        this.madLib = madLib;
-        this.words = this.getWords();
-        this.spaces = this.getSpaces();
+        this.madLibs = madLibs;
+        this.words = getWordsCount(this.madLibs);
+        this.spaces = getSpaceCount(this.madLibs);
 
     }
 
@@ -49,9 +47,6 @@ public class MadLibs {
     public int getSpaceCount(ArrayList<String>madLib){
         spaces=madLib.size()/2;
         return spaces;
-    }
-    public ArrayList<String> getMadLib() {
-        return madLib;
     }
     public int getWords() {
         return words;
