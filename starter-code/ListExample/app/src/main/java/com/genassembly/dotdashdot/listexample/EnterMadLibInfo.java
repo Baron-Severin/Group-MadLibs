@@ -20,7 +20,12 @@ public class EnterMadLibInfo extends AppCompatActivity {
         setContentView(R.layout.enter_mad_lib_info);
 
         libs = new ArrayList<>();
-        libs.add(new MadLibs("Horror", 100, 3));
+
+        libs.add(new MadLibs("Horror", 100, 20));
+        libs.add(new MadLibs("Fantasy", 12, 123));
+        libs.add(new MadLibs("Comedy", 10001243, 35));
+        libs.add(new MadLibs("Animation", 2134, 212));
+        libs.add(new MadLibs("Fantasy", 22, 43));
 
         listy = (ListView) findViewById(R.id.madList);
 

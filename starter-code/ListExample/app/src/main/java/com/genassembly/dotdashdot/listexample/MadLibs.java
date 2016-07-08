@@ -14,12 +14,9 @@ public class MadLibs {
         this.words = words;
         this.spaces = spaces;
     }
-<<<<<<< HEAD
 
-    public MadLibs(String genre, ArrayList<String> madLib){
-=======
     public MadLibs(String genre, ArrayList<String> madLibs){
->>>>>>> b4049600169fc950f3f4be1ecdd236246770c864
+
         this.genre = genre;
         this.madLibs = madLibs;
         this.words = getWordsCount(this.madLibs);

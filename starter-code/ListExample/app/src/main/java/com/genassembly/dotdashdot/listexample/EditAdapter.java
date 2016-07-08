@@ -42,21 +42,11 @@ public class EditAdapter extends BaseAdapter {
 
         Log.d("Postion: " , "" + position);
 
-        EditText v =(EditText) child;
+        View v = child;
 
         if (v == null) {
             v = inflater.inflate(R.layout.edit_item, parent, false);
         }
-
-        words.setText(String.valueOf(libs.get(position).getWords()));
-
-        v.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i("Adapter", "Clicked " + position);
-                eddy=(EditText) v.findViewById(R.id.FIELD10);
-            }
-        });
 
         return v;
     }

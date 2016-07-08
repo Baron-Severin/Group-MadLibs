@@ -1,106 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:text=""
         android:id="@+id/constructorTextView"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:background="#505050"
+        android:padding="3dp"/>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
 
         <EditText
-            android:layout_width="@dimen/view_input_width"
+            android:layout_width="0dp"
+            android:layout_weight="2"
             android:layout_height="wrap_content"
             android:id="@+id/constructorEditTextMadLib"
             android:layout_gravity="center_vertical"
-            android:hint="Enter Text"
-            android:layout_marginTop="@dimen/view_top_spacer"/>
+            android:hint="Enter Text"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Add Text to Story"
             android:id="@+id/constructorButtonAddText"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/view_top_spacer"
             android:onClick="addMLText"/>
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
 
         <Spinner
-            android:layout_width="@dimen/view_input_width"
+            android:layout_width="0dp"
+            android:layout_weight="2"
             android:layout_height="wrap_content"
             android:id="@+id/constructorSpinnerSpace"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/view_top_spacer"/>
+            android:layout_gravity="center_vertical"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Add Space"
+            android:text="Add Blank Word"
             android:id="@+id/constructorButtonForSpinner"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/view_top_spacer"
             android:onClick="addSpace"/>
 
     </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/constructorEditGenreName"
+        android:hint="Enter Genre"
+        android:layout_marginBottom="10dp" />
+
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginTop="@dimen/view_top_spacer">
+        android:layout_marginBottom="10dp"
+        >
 
-        <EditText
-            android:layout_width="@dimen/view_input_width"
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/constructorEditGenreName"
-            android:layout_gravity="center_vertical"
-            android:hint="Enter Genre"
-            android:layout_marginTop="@dimen/view_top_spacer" />
+            android:text="Reset All Text"
+            android:id="@+id/constructorButtonResetInput"
+            android:onClick="resetAllText"
+            android:background="@color/colorAccent"
+            android:layout_marginRight="5dp"/>
 
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Mad Lib Complete"
+            android:id="@+id/constructorButtonMadLibComplete"
+            android:background="@color/colorAccent"
+            android:onClick="finishML"
+            android:layout_marginLeft="5dp"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:text="Reset All Text"
-                android:id="@+id/constructorButtonResetInput"
-                android:layout_gravity="bottom"
-                android:onClick="resetAllText"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:text="Mad Lib Complete"
-                android:id="@+id/constructorButtonMadLibComplete"
-                android:layout_gravity="bottom"
-                android:onClick="finishML"/>
-        </LinearLayout>
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/back2Button"
+        android:layout_gravity="bottom"/>
 
 </LinearLayout>
