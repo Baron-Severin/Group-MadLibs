@@ -13,10 +13,10 @@ import java.util.ArrayList;
 
 public class EditAdapter extends BaseAdapter {
     private final LayoutInflater inflater;
-    private final ArrayList<MadLibs> libs;
+    private final ArrayList<String> libs;
     private final Context context;
 
-    public EditAdapter(Context context, ArrayList<MadLibs> libs) {
+    public EditAdapter(Context context, ArrayList<String> libs) {
         inflater = LayoutInflater.from(context);
         this.libs = libs;
         this.context = context;

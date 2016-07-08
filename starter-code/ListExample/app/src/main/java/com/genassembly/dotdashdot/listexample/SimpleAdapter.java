@@ -84,6 +84,7 @@ public class SimpleAdapter extends BaseAdapter {
             public void onClick(View view) {
                 Log.i("Adapter", "Clicked " + position);
                 Intent intent = new Intent(context.getApplicationContext(), EnterMadLibInfo.class);
+                intent.putExtra("MAD_LIB", libs.get(position).madLibs);
                 context.startActivity(intent);
             }
         });

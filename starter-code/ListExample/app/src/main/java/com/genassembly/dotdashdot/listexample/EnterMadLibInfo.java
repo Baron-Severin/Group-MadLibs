@@ -1,6 +1,7 @@
 package com.genassembly.dotdashdot.listexample;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -11,7 +12,7 @@ public class EnterMadLibInfo extends AppCompatActivity {
 
     EditAdapter adapty;
     ListView listy;
-    ArrayList<MadLibs> libs;
+    ArrayList<String> libs;
 
 
     @Override
@@ -19,14 +20,21 @@ public class EnterMadLibInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter_mad_lib_info);
 
+
+
+//        strings=madLib.madLibs is the array list of string for the madlib, alternating between test block and blank
+
+        Intent intent = getIntent();
+
+
+
+        ArrayList<String> string = intent.getStringArrayListExtra("MAD_LIB");
+
         libs = new ArrayList<>();
 
-        libs.add(new MadLibs("Horror", 100, 20));
-        libs.add(new MadLibs("Fantasy", 12, 123));
-        libs.add(new MadLibs("Comedy", 10001243, 35));
-        libs.add(new MadLibs("Animation", 2134, 212));
-        libs.add(new MadLibs("Fantasy", 22, 43));
-        libs.add(new MadLibs("Fantasy", 22, 43));
+        for (int i=1;i<(string.size());i+=2) {
+            libs.add(string.get(i));
+        }
 
         listy = (ListView) findViewById(R.id.madList);
 
