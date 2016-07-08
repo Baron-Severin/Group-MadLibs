@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:text=""
-        android:id="@+id/textView"
+        android:id="@+id/constructorTextView"
         android:layout_gravity="center_horizontal" />
 
     <LinearLayout
@@ -18,7 +18,7 @@
         <EditText
             android:layout_width="@dimen/view_input_width"
             android:layout_height="wrap_content"
-            android:id="@+id/enterMadLibText"
+            android:id="@+id/constructorEditTextMadLib"
             android:layout_gravity="center_vertical"
             android:hint="Enter Text"
             android:layout_marginTop="@dimen/view_top_spacer"/>
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Text to Story"
-            android:id="@+id/button"
+            android:id="@+id/constructorButtonAddText"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="@dimen/view_top_spacer"/>
     </LinearLayout>
@@ -40,7 +40,7 @@
         <Spinner
             android:layout_width="@dimen/view_input_width"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner"
+            android:id="@+id/constructorSpinnerSpace"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="@dimen/view_top_spacer"/>
 
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Space"
-            android:id="@+id/button2"
+            android:id="@+id/constructorButtonForSpinner"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="@dimen/view_top_spacer"/>
 
@@ -64,16 +64,11 @@
         <EditText
             android:layout_width="@dimen/view_input_width"
             android:layout_height="wrap_content"
-            android:id="@+id/enterGenreName"
+            android:id="@+id/constructorEditGenreName"
             android:layout_gravity="center_vertical"
-            android:hint="Enter Text"
+            android:hint="Enter Genre"
             android:layout_marginTop="@dimen/view_top_spacer" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mad Lib Complete"
-            android:id="@+id/buttonMadLibComplete" />
     </LinearLayout>
 
     <LinearLayout
@@ -82,14 +77,26 @@
         android:layout_height="match_parent"
         android:gravity="bottom">
 
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reset All Text"
-            android:id="@+id/resetInputButton"
-            android:layout_gravity="center_horizontal"
-            android:background="@android:color/holo_red_light"
-            android:layout_marginTop="@dimen/view_top_spacer" />
+            android:gravity="center_horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="Reset All Text"
+                android:id="@+id/constructorButtonResetInput"
+                android:layout_gravity="bottom" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="Mad Lib Complete"
+                android:id="@+id/constructorButtonMadLibComplete"
+                android:layout_gravity="bottom" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
