@@ -26,6 +26,7 @@ public class EnterMadLibInfo extends AppCompatActivity {
         libs.add(new MadLibs("Comedy", 10001243, 35));
         libs.add(new MadLibs("Animation", 2134, 212));
         libs.add(new MadLibs("Fantasy", 22, 43));
+        libs.add(new MadLibs("Fantasy", 22, 43));
 
         listy = (ListView) findViewById(R.id.madList);
 
