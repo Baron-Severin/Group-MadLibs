@@ -3,6 +3,7 @@ package com.genassembly.dotdashdot.listexample;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -123,10 +124,23 @@ public class IngestMadlib extends AppCompatActivity {
         currentDisplayText = "";
         editMadlib.setText("");
         lastAddedWasString = false;
+        editGenre.setText("");
         textView.setText(currentDisplayText);
     }
+
     public void finishML(View view) {
-        // send off the arraylist
-        resetAllText(view);
+        if (editGenre.getText().length() != 0) {
+            String genre = editGenre.getText().toString();
+            MadLibs madLib = new MadLibs(genre, currentTextChunks);
+            MainActivity.madLibsHolder.add(madLib);
+            resetAllText(view);
+        } else {
+            String message = "Please enter a genre before finishing your MadLib";
+            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+            textToSpeech.setSpeechRate(.9f);
+            if (!textToSpeech.isSpeaking()) {
+                textToSpeech.speak(message, TextToSpeech.QUEUE_FLUSH, null);
+            }
+        }
     }
 }

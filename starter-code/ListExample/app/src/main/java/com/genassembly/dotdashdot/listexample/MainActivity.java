@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener sortWords;
     View.OnClickListener sortGenre;
     View.OnClickListener sortSpaces;
-
+    public static ArrayList<MadLibs> madLibsHolder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
                 sortBySpaces(view);
             }
         };
+
+        madLibsHolder = new ArrayList<MadLibs>();
 
     }
 
