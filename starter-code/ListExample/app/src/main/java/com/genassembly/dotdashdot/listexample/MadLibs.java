@@ -5,22 +5,12 @@ import java.util.Collections;
 
 public class MadLibs {
 
-
     private int words, spaces;
     private String genre;
     static int wordCount=0;
+    public ArrayList<String> madLib;
 
-
-    private ArrayList<String> madLib;
-
-
-
-    public MadLibs(String genre, int words, int spaces){
-        this.genre = genre;
-
-        this.words = words;
-        this.spaces = spaces;
-    }
+    
     public MadLibs(String genre, ArrayList<String> madLib){
         this.genre = genre;
         this.madLib = madLib;
@@ -49,9 +39,6 @@ public class MadLibs {
     public int getSpaceCount(ArrayList<String>madLib){
         spaces=madLib.size()/2;
         return spaces;
-    }
-    public ArrayList<String> getMadLib() {
-        return madLib;
     }
     public int getWords() {
         return words;
