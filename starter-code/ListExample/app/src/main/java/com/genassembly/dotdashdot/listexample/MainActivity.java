@@ -1,5 +1,6 @@
 package com.genassembly.dotdashdot.listexample;
 
+import android.content.Intent;
 import android.provider.UserDictionary;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -90,5 +91,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         adapty.notifyDataSetChanged();
+    }
+
+    public void openIngestMadLib(View view) {
+        Intent intent = new Intent(this.getApplicationContext(), IngestMadlib.class);
+        this.startActivity(intent);
     }
 }
