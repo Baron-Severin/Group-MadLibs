@@ -29,7 +29,8 @@
             android:text="Add Text to Story"
             android:id="@+id/constructorButtonAddText"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/view_top_spacer"/>
+            android:layout_marginTop="@dimen/view_top_spacer"
+            android:onClick="addMLText"/>
     </LinearLayout>
 
     <LinearLayout
