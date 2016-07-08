@@ -10,7 +10,14 @@ public class MadLibs {
     static int wordCount=0;
     public ArrayList<String> madLib;
 
-    
+
+
+    public MadLibs(String genre, int words, int spaces){
+        this.genre = genre;
+
+        this.words = words;
+        this.spaces = spaces;
+    }
     public MadLibs(String genre, ArrayList<String> madLib){
         this.genre = genre;
         this.madLib = madLib;
