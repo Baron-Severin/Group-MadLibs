@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Button head1;
     Button head2;
     Button head3;
-    ArrayList<MadLibs> libs;
+    public static ArrayList<MadLibs> libs;
     View.OnClickListener sortWords;
     View.OnClickListener sortGenre;
     View.OnClickListener sortSpaces;
@@ -34,27 +34,25 @@ public class MainActivity extends AppCompatActivity {
         head2 = (Button) findViewById(R.id.header2);
         head3 = (Button) findViewById(R.id.header3);
 
+        ArrayList<String> arrayarray = new ArrayList<>();
+        arrayarray.add("A vacation is when you take a trip to some");
+        arrayarray.add("*ADJECTIVE*");
+        arrayarray.add("place with your");
+        arrayarray.add("*ADJECTIVE*");
+        arrayarray.add("family. Usually, you go to some place that is near");
+        arrayarray.add("*NOUN*");
+        arrayarray.add("or up on a");
+        arrayarray.add("*NOUN*");
+        arrayarray.add(". A good vacation place is one where you can ride ");
+        arrayarray.add("*ANIMAL");
+        arrayarray.add("or play");
+        arrayarray.add("*GAME*");
+        arrayarray.add(".");
+
+
         libs = new ArrayList<>();
         libs.add(new MadLibs("Horror", 100, 20));
-
-        ArrayList<String> arrayarray=new ArrayList<>();
-        arrayarray.add("Blah Blah");
-        arrayarray.add("*");
-        arrayarray.add("Blah Blah");
-        arrayarray.add("*");
-        arrayarray.add("Blah Blah");
-        arrayarray.add("*");
-        arrayarray.add("Blah Blah");
-        arrayarray.add("*");
-        arrayarray.add("Blah Blah");
-
-
-        libs.add(new MadLibs("Fantasy", 12, 123));
         libs.get(0).madLibs=arrayarray;
-        libs.add(new MadLibs("Comedy", 10001243, 35));
-        libs.add(new MadLibs("Animation", 2134, 212));
-        libs.add(new MadLibs("Fantasy", 22, 43));
-        libs.add(new MadLibs("Fantasy", 22, 43));
 
         listy = (ListView) findViewById(R.id.mainList);
         adapty = new SimpleAdapter(this, libs);

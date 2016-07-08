@@ -48,6 +48,9 @@ public class EditAdapter extends BaseAdapter {
             v = inflater.inflate(R.layout.edit_item, parent, false);
         }
 
+        EditText eddy = (EditText) v.findViewById(R.id.FIELD10);
+        eddy.setHint(libs.get(position));
+
         return v;
     }
 }

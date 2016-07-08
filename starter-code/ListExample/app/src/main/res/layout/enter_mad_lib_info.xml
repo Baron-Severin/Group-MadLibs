@@ -13,6 +13,6 @@
         android:text="Make the magic happen"
         android:id="@+id/makeMagic"
         android:layout_gravity="bottom"
-        android:background="@color/colorAccent"/>
+        android:background="@color/colorAccent" />
 
 </FrameLayout>
