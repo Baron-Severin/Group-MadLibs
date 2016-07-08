@@ -56,24 +56,24 @@ public class SimpleAdapter extends BaseAdapter {
         if (v == null) {
             v = inflater.inflate(R.layout.list_item, parent, false);
         }
-if (this.sortBy == R.string.SORT_BY_WORDS) {
-    words = (TextView) v.findViewById(R.id.FIELD1);
-    genre = (TextView) v.findViewById(R.id.FIELD2);
-    spaces = (TextView) v.findViewById(R.id.FIELD3);
-} else if (this.sortBy == R.string.SORT_BY_GENRE) {
-    genre = (TextView) v.findViewById(R.id.FIELD1);
-    spaces = (TextView) v.findViewById(R.id.FIELD2);
-    words = (TextView) v.findViewById(R.id.FIELD3);
-} else if (this.sortBy == R.string.SORT_BY_SPACES) {
-    spaces = (TextView) v.findViewById(R.id.FIELD1);
-    words = (TextView) v.findViewById(R.id.FIELD2);
-    genre = (TextView) v.findViewById(R.id.FIELD3);
-} else {
-    Log.d("MAIN", "SORT_BY conditional not met, using default");
-    words = (TextView) v.findViewById(R.id.FIELD1);
-    genre = (TextView) v.findViewById(R.id.FIELD2);
-    spaces = (TextView) v.findViewById(R.id.FIELD3);
-}
+        if (this.sortBy == R.string.SORT_BY_WORDS) {
+            words = (TextView) v.findViewById(R.id.FIELD1);
+            genre = (TextView) v.findViewById(R.id.FIELD2);
+            spaces = (TextView) v.findViewById(R.id.FIELD3);
+        } else if (this.sortBy == R.string.SORT_BY_GENRE) {
+            genre = (TextView) v.findViewById(R.id.FIELD1);
+            spaces = (TextView) v.findViewById(R.id.FIELD2);
+            words = (TextView) v.findViewById(R.id.FIELD3);
+        } else if (this.sortBy == R.string.SORT_BY_SPACES) {
+            spaces = (TextView) v.findViewById(R.id.FIELD1);
+            words = (TextView) v.findViewById(R.id.FIELD2);
+            genre = (TextView) v.findViewById(R.id.FIELD3);
+        } else {
+            Log.d("MAIN", "SORT_BY conditional not met, using default");
+            words = (TextView) v.findViewById(R.id.FIELD1);
+            genre = (TextView) v.findViewById(R.id.FIELD2);
+            spaces = (TextView) v.findViewById(R.id.FIELD3);
+        }
 
         words.setText(String.valueOf(libs.get(position).getWords()));
         genre.setText(String.valueOf(libs.get(position).getGenre()));
